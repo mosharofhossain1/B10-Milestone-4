@@ -47,6 +47,7 @@ for (let i = 0; i < fruits.length; i++) {
     console.log(i)
     console.log(fruits[i])
 }
+
 // ২. forEach() মেথড ব্যবহার করে
 fruits.forEach(function (fruit) {
     console.log(fruit)
@@ -55,3 +56,38 @@ fruits.forEach(function (fruit) {
 // ৩. map() মেথড ব্যবহার করে (নতুন অ্যারে তৈরি করতে)
 let doudle = numebrs.map(num => num * 2);
 console.log(doudle);
+
+/* 📌 ৩. slice() এবং splice()
+slice(start, end) একটি অংশ কেটে নেয় (মূল অ্যারে পরিবর্তন হয় না)
+splice(start, count, newItems...) অ্যারে পরিবর্তন করে */
+
+let arr = [10, 20, 30, 40, 50];
+console.log(arr.slice(1, 4));  // [20, 30, 40]
+arr.splice(2, 1, 35);          // [10, 20, 35, 40, 50]
+
+
+// ➤ filter() – নির্দিষ্ট শর্ত অনুযায়ী উপাদান ফিল্টার করা
+let filtered = numebrs.filter(num => num > 3);
+console.log(filtered);
+
+
+// ➤ find() – নির্দিষ্ট শর্ত অনুযায়ী প্রথম উপাদান খুঁজে বের করা
+let findValue = numebrs.find(num => num > 4)
+console.log(findValue);
+
+
+// ➤ sort() – অ্যারে সাজানো (Ascending Order)
+
+let nums = [2, , 9, 4, 8, 5, 1, 6];
+const sortValue = nums.sort();
+console.log(sortValue)
+
+// ➤ reverse() – অ্যারে উল্টানো (Descending Order)
+const reverseValue = nums.reverse();
+console.log(reverseValue);
+
+
+/* 📌 ৪. map(), filter(), reduce()
+map() নতুন অ্যারে ফিরিয়ে দেয়
+filter() নির্দিষ্ট শর্ত অনুযায়ী ফিল্টার করে
+reduce() সব ভ্যালু মিলিয়ে একটি মান দেয় */
